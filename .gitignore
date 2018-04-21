@@ -1,0 +1,30 @@
+# Ignore other files
+.DS\_Store/
+*.swp
+
+# Ignore Eclipse stuff
+.project
+.settings
+.classpath
+
+# Ignore Java and IntelliJ IDEA stuff
+.idea/
+.idea
+*.iml
+target/
+target
+**/classes/
+/bin/
+
+# Ignore hadoop asserts
+core-site.xml
+hbase-site.xml
+mapred-site.xml
+yarn-site.xml
+hdfs-site.xml
+hbase-policy.xml
+
+# Ignore log files
+/logs/
+*.log
+*.log.*
