@@ -1,4 +1,4 @@
-package com.yo.algorithm.practise.cig.stackqueue.getminstack;
+package com.yo.algorithm.practise.cig.stackqueue.getminstack1;
 
 import java.util.Stack;
 
@@ -45,9 +45,6 @@ public class GetMinStackV2<E> {
     }
 
     public void push(E newElement) {
-        if (stackData.size() == stackData.capacity()) {
-            throw new IllegalStateException("stack is full!");
-        }
         if (newElement == null) {
             throw new IllegalArgumentException("element to be pushed can not be null!");
         }
