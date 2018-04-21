@@ -1,4 +1,4 @@
-package com.yo.algorithm.practise.cig.stackqueue.getminstack1;
+package com.yo.algorithm.practise.cig.stackqueue.getminstack1.impl;
 
 import java.util.Stack;
 

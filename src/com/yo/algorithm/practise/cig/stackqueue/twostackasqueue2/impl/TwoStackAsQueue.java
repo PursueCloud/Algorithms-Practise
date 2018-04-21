@@ -1,4 +1,4 @@
-package com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2;
+package com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2.impl;
 
 import java.util.Stack;
 

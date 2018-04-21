@@ -1,4 +1,6 @@
-package com.yo.algorithm.practise.cig.stackqueue.getminstack1;
+package com.yo.algorithm.practise.cig.stackqueue.getminstack1.test;
+
+import com.yo.algorithm.practise.cig.stackqueue.getminstack1.impl.GetMinStackV1;
 
 /**
  * 测试 -- 有getMin功能的栈

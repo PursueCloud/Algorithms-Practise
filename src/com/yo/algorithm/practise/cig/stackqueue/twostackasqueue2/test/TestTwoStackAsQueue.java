@@ -1,4 +1,6 @@
-package com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2;
+package com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2.test;
+
+import com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2.impl.TwoStackAsQueue;
 
 import java.util.Arrays;
 
