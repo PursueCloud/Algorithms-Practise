@@ -3,6 +3,7 @@ package com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.structure;
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.Cat;
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.Dog;
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.Pet;
+import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.PetEnterQueue;
 
 import java.util.*;
 
@@ -10,52 +11,62 @@ import java.util.*;
  * 猫狗队列
  */
 public class CatDogQueueStandard {
-    private final Queue<Cat> catQueue;
-    private int catSeq;
-    private final Queue<Integer> catSeqQueue;
-    private final Queue<Dog> dogQueue;
-    private int dogSeq;
-    private final Queue<Integer> dogSeqQueue;
+    private final Queue<PetEnterQueue> catQueue;
+    private final Queue<PetEnterQueue> dogQueue;
+    private long count;
 
     public CatDogQueueStandard() {
         catQueue = new LinkedList<>();
-        catSeqQueue = new LinkedList<>();
         dogQueue = new LinkedList<>();
-        dogSeqQueue = new LinkedList<>();
     }
 
     public void add(Pet pet) {
         if (pet instanceof Cat) {
-            catQueue.add((Cat)pet);
-            catSeq = Math.max(catSeq, dogSeq) + 1;
-            catSeqQueue.add(catSeq);
+            catQueue.add(new PetEnterQueue(pet, count++));
         } else if (pet instanceof Dog) {
-            dogQueue.add((Dog)pet);
-            dogSeq = Math.max(catSeq, dogSeq) + 1;
-            dogSeqQueue.add(dogSeq);
+            dogQueue.add(new PetEnterQueue(pet, count++));
         } else {
-            throw new IllegalArgumentException("Unknow pet type : " + pet);
+            throw new IllegalArgumentException("Unknow pet type : " + pet.getType());
         }
     }
 
     public Pet pollAll() {
-        //todo implement poll one pet from the catDogQueue
-        return null;
-
+        //获取猫队列和狗队列队头元素count属性值，如果某一队列为空，其对应count值为-1
+        long catSeq = !catQueue.isEmpty() ? catQueue.peek().getCount() : -1;
+        long dogSeq = !dogQueue.isEmpty() ? dogQueue.peek().getCount() : -1;
+        if (catSeq>0 && dogSeq>0) {
+            //如果猫队列和狗队列均不为空
+            if (catSeq < dogSeq) {
+                //猫元素入队顺序比狗队列顺序小，对猫队列进行出队
+                return catQueue.poll().getPet();
+            } else {
+                //否则对狗队列进行出队
+                return dogQueue.poll().getPet();
+            }
+        } else if (catSeq > 0) {
+            //仅猫队列不为空，则对猫队列出队
+            return catQueue.poll().getPet();
+        } else if (dogSeq > 0) {
+            //仅狗队列不为空，则对狗队列出队
+            return dogQueue.poll().getPet();
+        } else {
+            //猫队列和狗队列均为空，则抛出异常
+            throw new IllegalStateException("Queue is empty!");
+        }
     }
 
     public Cat pollCat() {
         if (catQueue.isEmpty()) {
             throw new RuntimeException("There is no cat in queue!");
         }
-        return catQueue.poll();
+        return (Cat)catQueue.poll().getPet();
     }
 
     public Dog pollDog() {
         if (dogQueue.isEmpty()) {
             throw new RuntimeException("There is no dog in queue!");
         }
-        return dogQueue.poll();
+        return (Dog) dogQueue.poll().getPet();
     }
 
     public int totalSize() {
@@ -80,4 +91,5 @@ public class CatDogQueueStandard {
     public boolean isDogEmpty() {
         return dogQueue.size() == 0;
     }
+
 }
