@@ -8,6 +8,8 @@ import com.yo.algorithm.practise.cig.stackqueue.solvehanoiproblemwithstack6.impl
 public class TestSolveHanoiProblemWithStack {
 
     public static void main(String[] args) {
-        System.out.println(SolveHanoiProblemWithStack.solveHanoiProblemRecursive(64, "left", "mid", "right"));
+        System.out.println(SolveHanoiProblemWithStack.solveHanoiProblemRecursive(2, "left", "mid", "right"));
+        System.out.println("==================");
+        System.out.println(SolveHanoiProblemWithStack.solveHanoiProblemUnRecursive(2, "left", "mid", "right"));
     }
 }
