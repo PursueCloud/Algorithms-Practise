@@ -1,5 +1,6 @@
 package com.yo.algorithm.practise.cig.stackqueue.stacksortwithstack5.test;
 
+import com.yo.algorithm.practise.cig.stackqueue.practise.StackSortByAnotherStack;
 import com.yo.algorithm.practise.cig.stackqueue.stacksortwithstack5.impl.StackSortWithStack;
 
 import java.util.Stack;
@@ -30,7 +31,7 @@ public class TestStackSortByStack {
             stack.push(element);
         }
         System.out.println("排序前，栈的顺序（从后往前分布对应栈顶到栈底）为：" + stack);
-        StackSortWithStack.sort(stack);
+        StackSortByAnotherStack.sort(stack);
         System.out.println("排序后，栈的顺序（从后往前分布对应栈顶到栈底）为：" + stack);
     }
 }
