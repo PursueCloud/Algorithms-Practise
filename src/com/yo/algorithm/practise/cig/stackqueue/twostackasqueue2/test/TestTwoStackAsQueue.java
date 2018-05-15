@@ -1,5 +1,6 @@
 package com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2.test;
 
+import com.yo.algorithm.practise.cig.stackqueue.practise.TwoStackQueue;
 import com.yo.algorithm.practise.cig.stackqueue.twostackasqueue2.impl.TwoStackAsQueue;
 
 import java.util.Arrays;
@@ -36,7 +37,7 @@ public class TestTwoStackAsQueue {
         }
         System.out.println("original data1 : " + Arrays.toString(arr1));
         System.out.println("data show in queue : " + queue);
-//        pollQueueAndPrint(queue);
+        pollQueueAndPrint(queue);
         //测试数据2
         int[] arr2 = {4, 5, 6};
         //压入所有测试数据
@@ -49,6 +50,12 @@ public class TestTwoStackAsQueue {
     }
 
     public static void pollQueueAndPrint(TwoStackAsQueue<Integer> queue) {
+        while (!queue.isEmpty()) {
+            System.out.print(queue.poll() + " ");
+        }
+        System.out.println();
+    }
+    public static void pollQueueAndPrint(TwoStackQueue<Integer> queue) {
         while (!queue.isEmpty()) {
             System.out.print(queue.poll() + " ");
         }
