@@ -1,5 +1,6 @@
 package com.yo.algorithm.practise.cig.stackqueue.solvehanoiproblemwithstack6.test;
 
+import com.yo.algorithm.practise.cig.stackqueue.practise.HanoiProblem;
 import com.yo.algorithm.practise.cig.stackqueue.solvehanoiproblemwithstack6.impl.SolveHanoiProblemWithStack;
 
 /**
@@ -11,5 +12,7 @@ public class TestSolveHanoiProblemWithStack {
         System.out.println(SolveHanoiProblemWithStack.solveHanoiProblemRecursive(2, "left", "mid", "right"));
         System.out.println("==================");
         System.out.println(SolveHanoiProblemWithStack.solveHanoiProblemUnRecursive(2, "left", "mid", "right"));
+        System.out.println(HanoiProblem.hanoiProblemRecursive(2, "left", "mid", "right"));
+        System.out.println(HanoiProblem.hanoiProblemUnRecursive(2, "left", "mid", "right"));
     }
 }
