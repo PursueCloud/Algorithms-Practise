@@ -1,6 +1,7 @@
 package com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity;
 
 public class Pet {
+    public static int instanceCnt;
     private String type;
 
     public Pet(String type) {
@@ -11,8 +12,4 @@ public class Pet {
         return type;
     }
 
-    @Override
-    public String toString() {
-        return type + "@" + hashCode();
-    }
 }

@@ -5,6 +5,7 @@ import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.structure.CatD
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.Dog;
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.entity.Pet;
 import com.yo.algorithm.practise.cig.stackqueue.catdogqueue4.impl.structure.CatDogQueueStandard;
+import com.yo.algorithm.practise.cig.stackqueue.practise.CatDogQueue;
 
 /**
  * 测试 -- 猫狗队列
@@ -14,6 +15,27 @@ public class TestCatDogQueue {
     /**
     <pre>
         测试结果
+             实现类型：CatDogQueue
+                 init catDogQueue complete
+                 pollDog : Dog：1
+                 pollCat : Cat：0
+                 isEmpty : false
+                 totalSize : 6
+                 isDogEmpty : false
+                 dogSize : 3
+                 isCatEmpty : false
+                 catSize : 3
+                 init catDogQueue complete
+                 pollCat : Cat：3
+                 isEmpty : false
+                 totalSize : 13
+                 isDogEmpty : false
+                 dogSize : 7
+                 isCatEmpty : false
+                 catSize : 6
+                 pollAll : Dog：2
+                 init catDogQueue complete
+                 pollAll : Dog：4
              实现类型：CatDogQueueAnother
                  init catDogQueue complete
                  pollDog : [dog@1163157884, dog@1956725890, dog@356573597, dog@1735600054]
@@ -66,7 +88,7 @@ public class TestCatDogQueue {
      */
     public static void main(String[] args) {
 //        CatDogQueueAnother catDogQueue = new CatDogQueueAnother();
-        CatDogQueueStandard catDogQueue = new CatDogQueueStandard();
+        CatDogQueue catDogQueue = new CatDogQueue();
         System.out.println("实现类型：" + catDogQueue.getClass().getSimpleName());
         initCatDogQueue(catDogQueue);
         System.out.println("    pollDog : " + catDogQueue.pollDog());
@@ -98,6 +120,13 @@ public class TestCatDogQueue {
         System.out.println("    init catDogQueue complete");
     }
     public static void initCatDogQueue(CatDogQueueStandard catDogQueue) {
+        Pet[] petArr = {new Cat(), new Dog(), new Dog(), new Cat(), new Dog(), new Cat(), new Cat(), new Dog()};
+        for (Pet pet : petArr) {
+            catDogQueue.add(pet);
+        }
+        System.out.println("    init catDogQueue complete");
+    }
+    public static void initCatDogQueue(CatDogQueue catDogQueue) {
         Pet[] petArr = {new Cat(), new Dog(), new Dog(), new Cat(), new Dog(), new Cat(), new Cat(), new Dog()};
         for (Pet pet : petArr) {
             catDogQueue.add(pet);
