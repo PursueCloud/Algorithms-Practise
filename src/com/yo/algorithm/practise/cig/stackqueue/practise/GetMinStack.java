@@ -7,10 +7,10 @@ import java.util.Stack;
  *      思路：
  *          两个栈，一个栈dataStack用来存数据，另一个minStack用来存每一次入栈时最小的数据
  *      解法：
- *          1、入栈时，判断minStack是否为空或当前入栈元素比minStack栈顶元素小，如果是，则将元素压入minStack中；否则，不压入。
- *             出栈时，判断出栈元素是否比minStack栈顶元素相等，如果是，则将minStack栈顶元素出栈，然后将dataStack栈顶元素
+ *          1、入栈时，判断minStack是否为空或当前入栈元素比minStack栈顶元素小或相等，如果是，则将元素压入minStack中；否则，不压入。
+ *             出栈时，判断出栈元素是否与minStack栈顶元素相等，如果是，则将minStack栈顶元素出栈，然后将dataStack栈顶元素
  *             出栈；否则，minStack不出栈，dataStack栈顶元素出栈
- *          2、入栈时，判断minStack是否为空或当前入栈元素比minStack栈顶元素小，如果是，则将元素压入minStack中，否则，重复压入
+ *          2、入栈时，判断minStack是否为空或当前入栈元素比minStack栈顶元素小或相等，如果是，则将元素压入minStack中，否则，重复压入
  *            minStack栈顶元素到minStack。
  *             出栈时，直接弹出minStack和dataStack栈顶元素
  */
