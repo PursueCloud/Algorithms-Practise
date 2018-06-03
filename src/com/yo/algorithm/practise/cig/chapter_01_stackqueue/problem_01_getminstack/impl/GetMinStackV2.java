@@ -53,7 +53,7 @@ public class GetMinStackV2<E> {
             stackMin.push(newElement);
         } else {
             //否则，将stackMin栈顶元素重复压入stackMin
-            stackMin.push(getMin());
+            stackMin.push(stackMin.peek());
         }
         stackData.push(newElement);
     }

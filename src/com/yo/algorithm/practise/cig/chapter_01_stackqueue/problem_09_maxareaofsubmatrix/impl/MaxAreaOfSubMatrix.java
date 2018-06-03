@@ -18,8 +18,8 @@ public class MaxAreaOfSubMatrix {
         }
         int maxArea = 0;
         int[] height = new int[matrix[0].length];
-        for (int i = 0; i< matrix.length; i++) {
-            for (int j = 0; j< matrix[0].length; j++) {
+        for (int i = 0; i<matrix.length; i++) {
+            for (int j = 0; j<matrix[0].length; j++) {
                 height[j] = matrix[i][j]==0 ? 0 : height[j] + 1;
             }
             maxArea = Math.max(maxRecFromBottom(height), maxArea);

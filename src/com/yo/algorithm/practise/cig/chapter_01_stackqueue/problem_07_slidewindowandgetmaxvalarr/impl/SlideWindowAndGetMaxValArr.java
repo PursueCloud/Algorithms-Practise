@@ -25,7 +25,7 @@ public class SlideWindowAndGetMaxValArr {
             if (qmax.peekFirst() == i-w) {
                 qmax.pollFirst();
             }
-            //如果当前窗口已经到达，则将队头元素座位当前窗口的最大值
+            //如果当前窗口已经到达，则将队头元素设置为当前窗口的最大值
             if (i >= w-1) {
                 res[index++] = arr[qmax.peekFirst()];
             }

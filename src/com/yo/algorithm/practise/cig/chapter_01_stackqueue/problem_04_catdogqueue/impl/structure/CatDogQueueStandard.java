@@ -26,7 +26,7 @@ public class CatDogQueueStandard {
         } else if (pet instanceof Dog) {
             dogQueue.add(new PetEnterQueue(pet, count++));
         } else {
-            throw new IllegalArgumentException("Unknow pet type : " + pet.getType());
+            throw new IllegalArgumentException("Unknown pet type : " + pet.getType());
         }
     }
 
