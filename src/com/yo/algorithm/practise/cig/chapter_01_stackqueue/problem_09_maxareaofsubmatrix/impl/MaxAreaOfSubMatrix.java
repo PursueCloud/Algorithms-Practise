@@ -9,18 +9,18 @@ public class MaxAreaOfSubMatrix {
 
     /**
      * 最大子矩阵大小
-     * @param map 输入，二维数组，即矩阵
+     * @param matrix 输入，二维数组，即矩阵
      * @return
      */
-    public static int maxRecSize(int[][] map) {
-        if (map==null || map.length==0 || map[0].length==0) {
+    public static int maxRecArea(int[][] matrix) {
+        if (matrix ==null || matrix.length==0 || matrix[0].length==0) {
             return 0;
         }
         int maxArea = 0;
-        int[] height = new int[map[0].length];
-        for (int i=0; i<map.length; i++) {
-            for (int j=0; j<map[0].length; j++) {
-                height[j] = map[i][j]==0 ? 0 : height[j] + 1;
+        int[] height = new int[matrix[0].length];
+        for (int i = 0; i< matrix.length; i++) {
+            for (int j = 0; j< matrix[0].length; j++) {
+                height[j] = matrix[i][j]==0 ? 0 : height[j] + 1;
             }
             maxArea = Math.max(maxRecFromBottom(height), maxArea);
         }
