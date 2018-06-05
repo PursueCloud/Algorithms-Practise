@@ -1,4 +1,4 @@
-package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise;
+package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise;
 
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogqueue.impl.entity.Cat;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogqueue.impl.entity.Dog;

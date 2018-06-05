@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_05_stacksortwithstack.test;
 
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.StackSortByAnotherStack;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.StackSortByAnotherStack;
 
 import java.util.Stack;
 

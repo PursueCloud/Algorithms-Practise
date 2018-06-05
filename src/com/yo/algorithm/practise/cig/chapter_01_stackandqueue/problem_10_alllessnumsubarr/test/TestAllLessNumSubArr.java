@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_10_alllessnumsubarr.test;
 
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.AllLessNumSubArray;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.AllLessNumSubArray;
 
 import java.util.Arrays;
 

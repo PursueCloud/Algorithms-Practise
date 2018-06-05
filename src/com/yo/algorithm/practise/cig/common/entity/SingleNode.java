@@ -1,10 +1,10 @@
 package com.yo.algorithm.practise.cig.common.entity;
 
-public class Node {
+public class SingleNode {
     public int value;
-    public Node next;
+    public SingleNode next;
 
-    public Node(int value) {
+    public SingleNode(int value) {
         this.value = value;
     }
 }

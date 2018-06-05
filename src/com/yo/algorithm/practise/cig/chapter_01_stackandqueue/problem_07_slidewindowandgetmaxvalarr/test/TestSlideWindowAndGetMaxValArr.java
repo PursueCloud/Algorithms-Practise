@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_07_slidewindowandgetmaxvalarr.test;
 
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.SlideWindow;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.SlideWindow;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_07_slidewindowandgetmaxvalarr.impl.SlideWindowAndGetMaxValArr;
 
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_06_solvehanoiproblemwithstack.test;
 
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.HanoiProblem;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.HanoiProblem;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_06_solvehanoiproblemwithstack.impl.SolveHanoiProblemWithStack;
 
 /**

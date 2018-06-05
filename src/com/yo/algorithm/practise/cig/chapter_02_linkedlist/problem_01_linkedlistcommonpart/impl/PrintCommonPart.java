@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_02_linkedlist.problem_01_linkedlistcommonpart.impl;
 
-import com.yo.algorithm.practise.cig.common.entity.Node;
+import com.yo.algorithm.practise.cig.common.entity.SingleNode;
 
 /**
  * 打印两个有序链表的公共部分
@@ -12,7 +12,7 @@ import com.yo.algorithm.practise.cig.common.entity.Node;
  */
 public class PrintCommonPart {
 
-    public static void printCommonPart(Node head1, Node head2) {
+    public static void printCommonPart(SingleNode head1, SingleNode head2) {
         System.out.println("Common part: ");
         while (head1!=null && head2!=null) {
             if (head1.value < head2.value) {

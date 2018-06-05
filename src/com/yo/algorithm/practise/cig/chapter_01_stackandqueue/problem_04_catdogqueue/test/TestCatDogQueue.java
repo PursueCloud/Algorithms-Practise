@@ -5,7 +5,7 @@ import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogq
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogqueue.impl.entity.Dog;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogqueue.impl.entity.Pet;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_04_catdogqueue.impl.CatDogQueueStandard;
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.CatDogQueue;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.CatDogQueue;
 
 /**
  * 测试 -- 猫狗队列

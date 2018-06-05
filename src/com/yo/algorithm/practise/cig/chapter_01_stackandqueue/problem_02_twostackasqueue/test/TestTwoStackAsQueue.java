@@ -1,6 +1,6 @@
 package com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_02_twostackasqueue.test;
 
-import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.practise.TwoStackQueue;
+import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.review_practise.TwoStackQueue;
 import com.yo.algorithm.practise.cig.chapter_01_stackandqueue.problem_02_twostackasqueue.impl.TwoStackAsQueue;
 
 import java.util.Arrays;
