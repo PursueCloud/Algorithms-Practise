@@ -1,6 +1,6 @@
-package com.yo.algorithm.practise.cig.string.atoi.test;
+package com.yo.algorithm.practise.cig.chapter_05_string.problem_05_atoi.test;
 
-import com.yo.algorithm.practise.cig.string.atoi.impl.Atoi;
+import com.yo.algorithm.practise.cig.chapter_05_string.problem_05_atoi.impl.Atoi;
 
 public class AtoiTest {
 

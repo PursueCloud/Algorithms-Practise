@@ -1,6 +1,6 @@
-package com.yo.algorithm.practise.cig.getbinary1count.test;
+package com.yo.algorithm.practise.cig.chapter_07_bitoperation.problem_04_getbinary1count.test;
 
-import com.yo.algorithm.practise.cig.getbinary1count.impl.BinaryOne;
+import com.yo.algorithm.practise.cig.chapter_07_bitoperation.problem_04_getbinary1count.impl.BinaryOne;
 
 public class TestCountBinaryOne {
     public static void main(String[] args) {

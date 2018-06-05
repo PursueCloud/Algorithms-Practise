@@ -1,4 +1,4 @@
-package com.yo.algorithm.practise.cig.getbinary1count.impl;
+package com.yo.algorithm.practise.cig.chapter_07_bitoperation.problem_04_getbinary1count.impl;
 
 /**
  * 求一个数二进制中1的个数
