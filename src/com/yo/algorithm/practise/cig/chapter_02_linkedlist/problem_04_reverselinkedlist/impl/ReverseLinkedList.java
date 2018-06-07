@@ -55,7 +55,9 @@ public class ReverseLinkedList {
         }
         return pre;
     }
-//理解
+//理解==================================
+
+
     public static SingleNode reverseList(SingleNode head) {
         //新链表头节点
         SingleNode newHead = null;
