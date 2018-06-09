@@ -6,7 +6,7 @@ import com.yo.algorithm.practise.cig.common.entity.SingleNode;
 public class LinkedListUtil {
 
     /**
-     * 遍历单遍历
+     * 打印单遍历
      * @param node
      */
     public static void printLinkedList(SingleNode node) {
@@ -19,7 +19,7 @@ public class LinkedListUtil {
     }
 
     /**
-     * 遍历双链表
+     * 打印双链表
      * @param head
      */
     public static void printLinkedList(DoubleNode head) {
@@ -36,5 +36,22 @@ public class LinkedListUtil {
             end = end.last;
         }
         System.out.println();
+    }
+
+    /**
+     * 打印环形单链表
+     * @param head
+     */
+    public static void printCircularList(SingleNode head) {
+        if (head == null) {
+            return;
+        }
+        System.out.print("Circular List: " + head.value + " ");
+        SingleNode cur = head.next;
+        while (cur != head) {
+            System.out.print(cur.value + " ");
+            cur = cur.next;
+        }
+        System.out.println("-> " + head.value);
     }
 }
