@@ -1,5 +1,6 @@
 package com.yo.algorithm.practise.cig.common.util;
 
+import com.yo.algorithm.practise.cig.chapter_02_linkedlist.problem_09_copyrandomnodelist.impl.entity.RandomNode;
 import com.yo.algorithm.practise.cig.common.entity.DoubleNode;
 import com.yo.algorithm.practise.cig.common.entity.SingleNode;
 
@@ -53,5 +54,26 @@ public class LinkedListUtil {
             cur = cur.next;
         }
         System.out.println("-> " + head.value);
+    }
+
+    /**
+     * 打印含有随机指针节点的链表
+     * @param head
+     */
+    public static void printRandLinkedList(RandomNode head) {
+        RandomNode cur = head;
+        System.out.print("order: ");
+        while (cur != null) {
+            System.out.print(cur.value + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+        cur = head;
+        System.out.print("rand:  ");
+        while (cur != null) {
+            System.out.print(cur.rand == null ? "- " : cur.rand.value + " ");
+            cur = cur.next;
+        }
+        System.out.println();
     }
 }
