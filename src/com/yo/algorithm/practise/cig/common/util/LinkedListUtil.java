@@ -11,7 +11,7 @@ public class LinkedListUtil {
      * @param node
      */
     public static void printLinkedList(SingleNode node) {
-        System.out.print("Single Linked List: ");
+//        System.out.print("Single Linked List: ");
         while (node != null) {
             System.out.print(node.value + " ");
             node = node.next;
@@ -24,7 +24,7 @@ public class LinkedListUtil {
      * @param head
      */
     public static void printLinkedList(DoubleNode head) {
-        System.out.print("Double Linked List: ");
+//        System.out.print("Double Linked List: ");
         DoubleNode end = null;
         while (head != null) {
             System.out.print(head.value + " ");
