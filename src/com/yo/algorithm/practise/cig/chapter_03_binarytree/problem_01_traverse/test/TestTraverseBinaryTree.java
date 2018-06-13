@@ -58,7 +58,7 @@ public class TestTraverseBinaryTree {
         TraverseBinaryTree.UnRecursive.posOrderTraverse_2Stack(head);
         System.out.println();
         System.out.print("pos-order(1-stack): ");
-        TraverseBinaryTree.UnRecursive.posOrderTraverse_2Stack(head);
+        TraverseBinaryTree.UnRecursive.posOrderTraverse_1Stack(head);
 //        posOrderUnRecur2(head);
     }
 }

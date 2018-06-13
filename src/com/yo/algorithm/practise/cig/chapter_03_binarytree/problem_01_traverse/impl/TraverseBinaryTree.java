@@ -146,7 +146,7 @@ public class TraverseBinaryTree {
                 if (curr.left!=null && recent!=curr.left && recent!=curr.right) {
                     stack.push(curr.left);
                 } else if (curr.right!=null && recent!=curr.right) {
-                    stack.push(curr.left);
+                    stack.push(curr.right);
                 } else {
                     System.out.print(stack.pop().value + " ");
                     recent = curr;
