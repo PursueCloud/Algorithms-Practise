@@ -77,7 +77,6 @@ public class PrintEdge {
     }
 
 
-
     /**
      * 打印树的边界2，标准如下：
      * 1、头结点为边界节点
@@ -89,12 +88,16 @@ public class PrintEdge {
         if (root == null) {
             return;
         }
+        //先打印头节点
         System.out.print(root.value + " ");
+        //如果头节点左子树和右子树都不为空，则分别打印左子树和右子树的边界节点
         if (root.left!=null && root.right!=null) {
             printLeftEdge(root.left, true);
             printRightEdge(root.right, true);
         } else {
-            printEdge2(root.left!=null ? root.left : root.right);
+            //否则只打印其中一颗子树的边界节点
+            printEdge2(root.left!=null ? root.left :
+                    root.right);
         }
         System.out.println();
     }
