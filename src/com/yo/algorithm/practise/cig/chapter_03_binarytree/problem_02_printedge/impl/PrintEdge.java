@@ -9,66 +9,81 @@ public class PrintEdge {
 
     /**
      * 打印树的边界1，标准如下：
-     *
+     * 1、头节点为边界节点
+     * 2、叶子节点为边界节点
+     * 3、如果节点在其所在的层中时最左或最右，那么也是边界节点
      * @param root
      */
     public static void printEdge1(TreeNode root) {
         if (root == null) {
             return;
         }
+        //获取树的高度
         int height = getHeight(root, 0);
         TreeNode[][] edgeMap = new TreeNode[height][2];
-        setEdgeMap(root, 0, edgeMap);
+        setEdge(root, 0, edgeMap);
         //打印左边界
-        for (int i=0; i!=edgeMap.length; i++) {
+        for (int i=0; i<edgeMap.length; i++) {
             System.out.print(edgeMap[i][0].value + " ");
         }
-        //打印既不是左边界，也不是右边界的叶子节点
-        printLeafNotInMap(root, 0, edgeMap);
-        //打印右边界，但不是左边界的节点
-        for (int i=edgeMap.length; i!=-1; i--) {
+        //打印既不是左边界也不是右边界的非叶子节点
+        printNotLeafInMap(root, 0, edgeMap);
+        //打印右边界
+        for (int i=edgeMap.length-1; i>-1; i--) {
             if (edgeMap[i][0] != edgeMap[i][1]) {
                 System.out.print(edgeMap[i][1].value + " ");
             }
         }
         System.out.println();
     }
-
     /**
-     * 获取树的高度
-     * @param node
-     * @param level
-     * @return
-     */
-    private static int getHeight(TreeNode node, int level) {
-        if (node == null) {
-            return 1;
+     * 获取二叉树的高度
+     **/
+    private static int getHeight(TreeNode root, int level) {
+        if (root == null) {
+            return level;
         }
-        //左子树的高度与右子树的高度中较大的那个
-        return Math.max(getHeight(node.left, level+1), getHeight(node.right, level+1));
+        return Math.max(getHeight(root.left, level+1), getHeight(root.right, level+1));
     }
-    private static void setEdgeMap(TreeNode node, int level, TreeNode[][] edgeMap) {
+    /**
+     * 设置二叉树每一层的左边界和右边界
+     **/
+    private static void setEdge(TreeNode node, int level, TreeNode[][] edgeMap) {
         if (node == null) {
             return;
         }
+        //左边界
         edgeMap[level][0] = edgeMap[level][0]==null ? node : edgeMap[level][0];
+        //右边界
         edgeMap[level][1] = node;
-        setEdgeMap(node.left, level+1, edgeMap);
-        setEdgeMap(node.right, level+1, edgeMap);
+        //递归设置左子树每一层的左边界和右边界
+        setEdge(node.left, level+1, edgeMap);
+        //递归设置右子树每一层的左边界和右边界
+        setEdge(node.right, level+1, edgeMap);
     }
-    private static void printLeafNotInMap(TreeNode node, int level, TreeNode[][] m) {
+    /**
+     * 打印既不是左边界也不是右边界的非叶子节点
+     **/
+    private static void printNotLeafInMap(TreeNode node, int level, TreeNode[][] map) {
         if (node == null) {
             return;
         }
-        if (node.left==null && node.right==null && node!=m[level][0] && node!=m[level][1]) {
+        if (node.left==null && node.right==null &&
+                node!=map[level][0] && node!=map[level][1]) {
             System.out.print(node.value + " ");
         }
-        printLeafNotInMap(node.left, level+1, m);
-        printLeafNotInMap(node.right, level+1, m);
+        printNotLeafInMap(node.left, level+1, map);
+        printNotLeafInMap(node.right, level+1, map);
     }
+
+
 
     /**
      * 打印树的边界2，标准如下：
+     * 1、头结点为边界节点
+     * 2、叶子节点为边界节点
+     * 3、树左边界延伸下去的路径为边界节点
+     * 4、树右边界延伸下去的路径为边界节点
      */
     public static void printEdge2(TreeNode root) {
         if (root == null) {
@@ -91,16 +106,17 @@ public class PrintEdge {
             System.out.print(node.value + " ");
         }
         printLeftEdge(node.left, print);
-        printLeftEdge(node.right, print && node.left==null ? true : false);
+        printLeftEdge(node.right, print && node.left==null);
     }
     private static void printRightEdge(TreeNode node, boolean print) {
         if (node == null) {
             return;
         }
-        printRightEdge(node.left, print && node.right==null ? true : false);
+        printRightEdge(node.left, print && node.right==null);
         printRightEdge(node.right, print);
         if (print || (node.left==null && node.right==null)) {
             System.out.print(node.value + " ");
         }
     }
+
 }
