@@ -1,11 +1,11 @@
-package com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreevisually.impl;
+package com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreeintuitively.impl;
 
 import com.yo.algorithm.learning.binarytree.datastructure.TreeNode;
 
 /**
  * 直观地打印二叉树
  */
-public class PrintTreeVisually {
+public class PrintTreeIntuitively {
 
     public static void printTreeIntuitive(TreeNode root) {
         System.out.println("Binary Tree:");

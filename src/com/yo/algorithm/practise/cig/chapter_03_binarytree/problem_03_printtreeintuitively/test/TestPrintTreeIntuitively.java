@@ -1,13 +1,13 @@
-package com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreevisually.test;
+package com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreeintuitively.test;
 
 import com.yo.algorithm.learning.binarytree.datastructure.TreeNode;
 
-import static com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreevisually.impl.PrintTreeVisually.printTreeIntuitive;
+import static com.yo.algorithm.practise.cig.chapter_03_binarytree.problem_03_printtreeintuitively.impl.PrintTreeIntuitively.printTreeIntuitive;
 
 /**
  * 测试 - 直观地打印二叉树
  */
-public class TestPrintTreeVisually {
+public class TestPrintTreeIntuitively {
 
     public static void main(String[] args) {
         TreeNode head = new TreeNode(1);
